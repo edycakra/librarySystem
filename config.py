@@ -2,7 +2,7 @@
 1. Membuat koneksi antara Python dan DB di MySQL
 2. Pembuatan database libraryMS
 3. Pembuatan dan pengisian initial tables: user, buku, peminjaman
-4. Insert initial data ke dalam tables: user, buku, peminjaman
+4. Insert initial data ke dalam tables: user, buku
 """
 
 # import library yang digunakan untuk menyambungkan python dengan mysql
@@ -32,7 +32,7 @@ myconn = mysql.connector.connect(host=host, user=user,
 # create cursor
 mycursor = myconn.cursor()
 
-# 1st query: pembuatan database
+# query: pembuatan database
 try:
     query_createDB = "CREATE DATABASE {}".format(db)
     mycursor.execute(query_createDB)
@@ -45,7 +45,7 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor()
 
 # query: pembuatan table (user, buku, peminjaman)
-# 2nd query: create table user
+# query: create table user
 try:
     query_createTableUser = """
     CREATE TABLE IF NOT EXISTS user(
@@ -62,7 +62,7 @@ try:
 except:
     print("===> Warning: Table user already exists")
 
-# 3rd query: create table buku
+# query: create table buku
 try:
     query_createTableBuku = """
     CREATE TABLE IF NOT EXISTS buku(
@@ -77,7 +77,7 @@ try:
 except:
     print("===> Warning: Table buku already exists")
 
-# 4th query: create table peminjaman
+# query: create table peminjaman
 try:
     query_createTablePeminjaman = """
     CREATE TABLE IF NOT EXISTS peminjaman(
@@ -96,3 +96,25 @@ try:
     mydb.commit()
 except:
     print("===> Warning: Table peminjaman already exists")
+
+# query: insert table user
+query_insertTableUser = """
+  INSERT INTO user VALUES
+    (1, 'Henry', '1977-08-17', 'Pesepakbola', 'Perancis'),
+    (2, 'Fabregas', '1987-05-04', 'Pesepakbola', 'Spanyol'),
+    (3, 'Saka', '2001-09-05', 'Pesepakbola', 'Inggris')
+    ;
+  """
+mycursor.execute(query_insertTableUser)
+mydb.commit()
+
+# query: insert table buku
+query_insertTableBuku = """
+  INSERT INTO buku VALUES
+    (1001, 'Atomic Habit', 'Self-help', 8),
+    (1002, 'Radical Candor', 'Skill', 3),
+    (1003, 'The Creativity Code', 'Tech', '2')
+    ;
+  """
+mycursor.execute(query_insertTableBuku)
+mydb.commit()
