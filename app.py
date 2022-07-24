@@ -6,7 +6,7 @@ from mysql.connector import Error
 import mysql.connector
 
 # list fungsi modular
-from addingUser import *
+from userManagement import *
 
 # config mysql
 host = "localhost"
@@ -48,6 +48,22 @@ def runningApp():
         print("Kesalahan pada input, Command input: (1-9)")
     elif pilihan == 1:
         addNewUser()
+    # elif pilihan == 2:
+    #     addNewBook()
+    # elif pilihan == 3:
+    #     borrowBook()
+    # elif pilihan == 4:
+    #     getBooks()
+    elif pilihan == 5:
+        getUsers()
+    # elif pilihan == 6:
+    #     getBorrowDetails()
+    # elif pilihan == 7:
+    #     searchBook()
+    # elif pilihan == 8:
+    #     returnBook()
+    elif pilihan == 9:
+        print("LMS selesai!")
 
 
 runningApp()

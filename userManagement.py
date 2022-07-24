@@ -43,3 +43,22 @@ def addNewUser():
 
     except:
         print("Terjadi kesalahan")
+
+
+def getUsers():
+    """ Fungsi untuk menunjukkan keseluruhan anggota di dalam database LMS
+    """
+    try:
+        query_getUsers = "SELECT * FROM user;"
+        mycursor.execute(query_getUsers)
+        userList = mycursor.fetchall()
+
+        print("id_user", "\t", "username", "\t", "tgl_lahir",
+              "\t", "pekerjaan",  "\t", "alamat")
+        for id_user, username, tgl, pekerjaan, alamat in userList:
+            print(id_user, "\t", username, "\t", tgl,
+                  "\t", pekerjaan,  "\t", alamat)
+        print("============================================================")
+
+    except:
+        print("Terjadi kesalahan")
