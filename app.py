@@ -1,5 +1,4 @@
-""" Module 'app' merupakan modul utama dalam pembuatan aplikasi LMS, dan terdiri atas:
-1. 
+""" Module 'app' merupakan modul utama dalam pembuatan aplikasi LMS, dan terdiri atas kumpulan modul yang sudah dipartisi menurut fungsi-fungsi manipulasi data user, book, dan borrow yang terangkum dalam modul userManagement.py, bookManagement,py, borrowManagement.py:
 """
 # import library yang digunakan untuk menyambungkan python dengan mysql
 from mysql.connector import Error
