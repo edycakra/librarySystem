@@ -1,5 +1,6 @@
-""" Module 'addNewUser' merupakan modul partisi dalam pembuatan aplikasi LMS, dan terdiri atas:
+""" Module 'userManagement' merupakan modul partisi dalam pembuatan aplikasi LMS, dan terdiri atas:
 1. Fungsi pembuatan user baru
+2. Fungsi yang menampilkan daftar semua user
 """
 # import library yang digunakan untuk menyambungkan python dengan mysql
 from mysql.connector import Error
