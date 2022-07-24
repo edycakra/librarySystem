@@ -87,7 +87,6 @@ try:
       book_title VARCHAR(40),
       tanggal_pinjam DATE,
       tanggal_kembali DATE,
-      stock INT,
       FOREIGN KEY(id_user) REFERENCES user(id_user) ON DELETE SET NULL,
       FOREIGN KEY(id_buku) REFERENCES buku(id_buku) ON DELETE SET NULL
     );
@@ -100,9 +99,9 @@ except:
 # query: insert table user
 query_insertTableUser = """
   INSERT INTO user VALUES
-    (1, 'Henry', '1977-08-17', 'Pesepakbola', 'Perancis'),
+    (1, 'Thierry Henry', '1977-08-17', 'Pesepakbola', 'Perancis'),
     (2, 'Fabregas', '1987-05-04', 'Pesepakbola', 'Spanyol'),
-    (3, 'Saka', '2001-09-05', 'Pesepakbola', 'Inggris')
+    (3, 'Bukayo Saka', '2001-09-05', 'Pesepakbola', 'Inggris')
     ;
   """
 mycursor.execute(query_insertTableUser)
@@ -113,7 +112,7 @@ query_insertTableBuku = """
   INSERT INTO buku VALUES
     (1001, 'Atomic Habit', 'Self-help', 8),
     (1002, 'Radical Candor', 'Skill', 3),
-    (1003, 'The Creativity Code', 'Tech', '2')
+    (1003, 'Creativity Code', 'Tech', '2')
     ;
   """
 mycursor.execute(query_insertTableBuku)
