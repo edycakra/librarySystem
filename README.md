@@ -1,4 +1,4 @@
-# Library Managemenet System
+# Library Management System
 
 Library Management System is a simple app created with Python + MySQL to let user:
 
@@ -46,3 +46,45 @@ Library Management System is a simple app created with Python + MySQL to let use
 1. `Validators` for book input (book_id and book_title should exist in mysql db)
 2. `Validators` for user input (user_id and username should exist in mysql db)
 3. Need a `role` function to separate `admin` and `customers`
+
+# Test Case
+
+1. Add new user
+
+   ![1 Add new user](https://raw.githubusercontent.com/edycakra/librarySystem/main/images/1.png)
+
+2. Show users
+
+![2 Show users](https://raw.githubusercontent.com/edycakra/librarySystem/main/images/2.png)
+
+3. Add new book
+
+![3 Add new book](https://raw.githubusercontent.com/edycakra/librarySystem/main/images/3.png)
+
+4. Show books
+
+![4 Show books](https://raw.githubusercontent.com/edycakra/librarySystem/main/images/4.png)
+
+5. Borrow a book
+
+![5 Borrow a book](https://raw.githubusercontent.com/edycakra/librarySystem/main/images/5.png)
+
+6. Show borrowing details
+
+![6 Show borrowing details](https://raw.githubusercontent.com/edycakra/librarySystem/main/images/6.png)
+
+7. Return a book
+
+![7 Return a book](https://raw.githubusercontent.com/edycakra/librarySystem/main/images/7.png)
+
+8. Show empty table of borrowing details after returning a book
+
+![8 Show empty table of borrowing details after returning a book](https://raw.githubusercontent.com/edycakra/librarySystem/main/images/8.png)
+
+9. Show books after return
+
+![9 Show books after return](https://raw.githubusercontent.com/edycakra/librarySystem/main/images/9.png)
+
+10. Search a book(s)
+
+![10 Search a book(s)](https://raw.githubusercontent.com/edycakra/librarySystem/main/images/10.png)
